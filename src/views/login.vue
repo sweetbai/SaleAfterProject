@@ -28,7 +28,7 @@
               </div>
             </FormItem>
             <FormItem>
-              <Button class="btn-login" to="/views/home"  type="primary" long>登录</Button>
+              <Button class="btn-login" type="primary" long>登录</Button>
               <span class="title-forget" >忘记密码</span>
               <span class="title-register" >账号注册</span>
             </FormItem>
