@@ -28,8 +28,8 @@
               </div>
             </FormItem>
             <FormItem>
-              <Button class="btn-login" type="primary" long>登录</Button>
-              <span class="title-forget" >忘记密码</span>
+              <Button class="btn-login" type="primary" @click="handleSubmit('formInline')" long>登录</Button>
+              <span class="title-forget" @click="User_Register" >忘记密码</span>
               <span class="title-register" >账号注册</span>
             </FormItem>
           </Form>
@@ -68,16 +68,16 @@
             handleSubmit(name) {
                 this.$refs[name].validate((valid) => {
                     if (valid) {
+                      console.log("doing")
                         this.$Message.success('登陆成功!');
-                        router.push("/home");
+                        this.$router.push({path: "/home"});
                     } else {
                         this.$Message.error('登陆失败!');
                     }
                 })
             },
-            home_index() {
-              debugger;
-				      this.$router.push({ name: 'home' });
+            User_Register() {
+				      this.$router.push({ name: 'register' });
 			      }
         }
     }
