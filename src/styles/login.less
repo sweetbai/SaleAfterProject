@@ -1,0 +1,113 @@
+[login-warp],
+[backgroundImg],
+.login {
+  width: 100%;
+  height: 100%;
+
+}
+
+[login-warp] {
+  position: relative;
+}
+
+[backgroundImg] {
+  position: absolute;
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+[recordNumber] {
+  position: absolute;
+  bottom: 0px;
+  height: 30px;
+  line-height: 30px;
+  width: 100%;
+  text-align: center;
+  background: white;
+}
+
+.login {
+  position: relative;
+  &-con {
+    position: absolute;
+    right: 11%;
+    width: 280px;
+    padding-top: 26px;
+    top: 50%;
+    margin-top:-155px; 
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.6);
+    .form-con {
+      padding: 0 20px;
+      .ivu-input-group-prepend,
+      .ivu-input {
+        border-radius: 3px;
+      }
+      .title-register{
+        padding-top: 12px;
+        padding-right: 20px;
+        float: right;
+        color: #2d8cf0;
+        font-size:13px; 
+        cursor: pointer;
+      }
+      .title-forget{
+        padding-top: 12px;
+        padding-right: 10px;
+        float: right;
+        color: #2d8cf0;
+        font-size:13px; 
+        cursor: pointer;
+      }
+      .vali-input{
+        width: 100px;
+        font-size: inherit;
+        &:focus{
+          box-shadow: none;
+        }
+        .ivu-input{
+          &:focus,
+          &:hover{
+            border-color: #dddee1;
+            box-shadow: none;
+          }
+        }
+      }
+      img{
+        width: 105px;
+        height: 33.6px;
+        vertical-align: bottom;
+        margin-left: 4px;
+        float: right;
+      }
+    }
+  }
+}
+
+// .form-con .ivu-input-group-prepend{
+//   border-radius: 3px;
+// }
+[login-warp] {
+  .btn-login {
+    font-size: 16px;
+    letter-spacing: 10px;
+    font-weight: 500;
+    padding: 4px 0;
+  }
+  div[class^="ivu-input-wrapper"] {
+    border: 1px solid #dddee1;
+    border-radius: 4px;
+    .ivu-input-group-prepend {
+      border: none;
+    }
+    input[class="ivu-input"] {
+      border: none;
+      font-size: 14px;
+      &:focus {
+        box-shadow: none;
+      }
+    }
+  }
+
+}
