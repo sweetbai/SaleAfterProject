@@ -17,7 +17,7 @@
             <FormItem prop="passWord">
               <Input type="password"  v-model="formInline.passWord" placeholder="请输入密码">
               <span slot="prepend">
-                <Icon :size="16" type="ios-lock-outline"></Icon>
+                <Icon :size="20" type="ios-locked-outline"></Icon>
               </span>
               </Input>
             </FormItem>
@@ -29,8 +29,6 @@
             </FormItem>
             <FormItem>
               <Button class="btn-login" type="primary" @click="handleSubmit('formInline')" long>登录</Button>
-              <span class="title-forget" @click="User_Register" >忘记密码</span>
-              <span class="title-register" >账号注册</span>
             </FormItem>
           </Form>
         </div>
@@ -69,16 +67,14 @@
                 this.$refs[name].validate((valid) => {
                     if (valid) {
                       console.log("doing")
-                        this.$Message.success('登陆成功!');
+                        this.$Loading.finish();
                         this.$router.push({path: "/home"});
+                        this.$Message.success('登陆成功!');
                     } else {
                         this.$Message.error('登陆失败!');
                     }
                 })
-            },
-            User_Register() {
-				      this.$router.push({ name: 'register' });
-			      }
+            }
         }
     }
 </script>
