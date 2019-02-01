@@ -28,7 +28,7 @@
               </div>
             </FormItem>
             <FormItem>
-              <Button class="btn-login" type="primary" long>登录</Button>
+              <Button class="btn-login"  @click="handleSubmit('formInline')"  type="primary" long>登录</Button>
               <span class="title-forget" >忘记密码</span>
               <span class="title-register" >账号注册</span>
             </FormItem>
@@ -69,7 +69,7 @@
                 this.$refs[name].validate((valid) => {
                     if (valid) {
                         this.$Message.success('登陆成功!');
-                        router.push("/home");
+                        this.$router.push('')
                     } else {
                         this.$Message.error('登陆失败!');
                     }
