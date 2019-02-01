@@ -12,9 +12,14 @@ export default new Router({
 			component: resolve => require(['../views/login.vue'],resolve)
 		},
 		{
-			path: '/',
+			path: '/home',
 			name: 'home',
 			component: resolve => require(['../views/home.vue'],resolve)
-		}
+    },
+    {
+      path: '/register',
+      name: 'register',
+      component: resolve => require(['../views/register.vue'],resolve)
+    }
 	]
 })
